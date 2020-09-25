@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "MainMenuController",
-    "path": "folders/Objects/MainMenu+Options/MainMenuController.yy",
+    "name": "OptionsController",
+    "path": "folders/Objects/MainMenu+Options/OptionsController.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_mainMenuController",
+  "name": "scr_optionController",
   "tags": [],
   "resourceType": "GMScript",
 }
