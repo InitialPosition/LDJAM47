@@ -4,7 +4,7 @@
 **/
 function mainMenuController_initializeMainMenu() {
 	// metadata
-	GAME_NAME = "LDJAM47";
+	GAME_NAME = "Quantum Split";
 	GAME_VERSION = "v" + string(GM_version);
 	GAME_COPYRIGHT = "(c) 2020 InitialPosition";
 	
@@ -27,7 +27,7 @@ function mainMenuController_enterSelection() {
 	
 	switch (selection) {
 		case 0:						// NEW GAME
-			fade_initializeFade(rm_fadeTest, $000000, 2000);
+			fade_initializeFade(rm_quote1, $000000, 2000);
 			break;
 		case 1:						// OPTIONS
 			fade_initializeFade(rm_options, $000000, 500);
@@ -46,7 +46,7 @@ function mainMenuController_drawMainMenu() {
 	
 	// game name
 	draw_set_font(fnt_mainMenu_large);
-	draw_text_color(room_width / 2, room_height / 2 - 150, GAME_NAME, c_white, c_white, c_white, c_white, 1);
+	draw_text_color(room_width / 2, room_height / 2 - 100, GAME_NAME, c_white, c_white, c_white, c_white, 1);
 	
 	draw_set_font(fnt_mainMenu_medium);
 	

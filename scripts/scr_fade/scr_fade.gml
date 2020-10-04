@@ -59,3 +59,53 @@ function fade_drawFade() {
 	draw_rectangle_color(0, 0, room_width, room_height, targetCol, targetCol, targetCol, targetCol, false);
 	draw_set_alpha(1);
 }
+
+function fade_triggerRoomChange() {
+	// lock player in place
+	with (obj_player) {
+		xx = 0;
+		yy = 0;
+		
+		canMove = false;
+		visible = false;
+	}
+	
+	var targetRoom;
+	switch (room) {
+		case rm_intro:
+			targetRoom = rm_level_01
+			break;
+		case rm_level_01:
+			targetRoom = rm_level_02;
+			break;
+		case rm_level_02:
+			targetRoom = rm_level_03;
+			break;
+		case rm_level_03:
+			targetRoom = rm_quote2;
+			break;
+		case rm_level_04:
+			targetRoom = rm_level_05;
+			break;
+		case rm_level_05:
+			targetRoom = rm_quote3;
+			break;
+		case rm_level_06:
+			targetRoom = rm_level_07;
+			break;
+		case rm_level_07:
+			targetRoom = rm_level_08;
+			break;
+		case rm_level_08:
+			targetRoom = rm_level_09;
+			break;
+		case rm_level_09:
+			targetRoom = rm_quote4;
+			break;
+		default:
+			targetRoom = rm_error;
+			break;
+	}
+	
+	fade_initializeFade(targetRoom, c_black, 1000);
+}

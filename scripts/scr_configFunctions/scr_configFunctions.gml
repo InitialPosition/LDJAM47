@@ -6,8 +6,8 @@ function scr_hasConfig() {
 function scr_loadConfig() {
 	ini_open(global.CONFIG_PATH);
 	
-	global.VOLUME_MUSIC = ini_read_real("volume", "music", 0.5);
-	global.VOLUME_SFX = ini_read_real("volume", "sound", 0.5);
+	global.VOLUME_MUSIC = ini_read_real("volume", "music", 0.2);
+	global.VOLUME_SFX = ini_read_real("volume", "sound", 0.2);
 	
 	ini_close();
 }

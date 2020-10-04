@@ -1,0 +1,2 @@
+/// @description 
+rift_initializeFade()

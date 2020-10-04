@@ -52,7 +52,7 @@ function optionController_handleIncrease() {
 		if (global.VOLUME_MUSIC < 1) {
 			// set new gain
 			global.VOLUME_MUSIC += 0.05;
-			audio_group_set_gain(audiogroup_music, global.VOLUME_MUSIC, 0);
+			audio_group_set_gain(audiogroup_default, global.VOLUME_MUSIC, 0);
 			
 			// update display
 			option[0] = "MUSIC VOLUME: " + string(round(global.VOLUME_MUSIC * 100)) + "%";
@@ -74,7 +74,7 @@ function optionController_handleDecrease() {
 		if (global.VOLUME_MUSIC > 0) {
 			// set new gain
 			global.VOLUME_MUSIC -= 0.05;
-			audio_group_set_gain(audiogroup_music, global.VOLUME_MUSIC, 0);
+			audio_group_set_gain(audiogroup_default, global.VOLUME_MUSIC, 0);
 			
 			// update display
 			option[0] = "MUSIC VOLUME: " + string(round(global.VOLUME_MUSIC * 100)) + "%";
